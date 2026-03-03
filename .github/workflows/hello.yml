@@ -1,7 +1,8 @@
 name: Hello GitHub Actions
 
 on:
-  push: branch[main]
+  push:
+    branches: [main]
 
 jobs:
   greet:
@@ -21,11 +22,9 @@ jobs:
         run: |
           echo Branch:
           echo $GITHUB_REF_NAME
-          
+
       - name: List files
         run: ls -la
 
       - name: Runner OS
         run: uname -a
-        
-
