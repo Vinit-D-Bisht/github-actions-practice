@@ -18,10 +18,10 @@ jobs:
         run: date
 
       - name: Print branch name
-        env:
-          BRANCH_NAME: ${{ github.ref_name }}
-        run: echo "Branch: $BRANCH_NAME"
-
+        run: |
+          echo Branch:
+          echo $GITHUB_REF_NAME
+          
       - name: List files
         run: ls -la
 
