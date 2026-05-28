@@ -1,4 +1,4 @@
-name: Day 35 - Multi-Stage Build & Docker Hub
+name: Day 35- Multi-Stage Build & Docker Hub
 
 on:
   push:
