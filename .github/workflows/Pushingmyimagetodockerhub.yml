@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourdockerhubusername/node-app:latest
+          tags: devopspractice1989/node-app:latest
