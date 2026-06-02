@@ -2,6 +2,9 @@ name: HOHello Workflow
 
 on:
   push:
+   branches:
+     - main
+     - master
 
 jobs:
   greet:
