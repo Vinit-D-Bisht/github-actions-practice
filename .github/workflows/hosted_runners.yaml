@@ -1,0 +1,29 @@
+name: Hosted Runners
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "OS: Linux"
+          hostname
+          whoami
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: |
+          echo OS: Windows
+          hostname
+          whoami
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - run: |
+          echo "OS: macOS"
+          hostname
+          whoami
