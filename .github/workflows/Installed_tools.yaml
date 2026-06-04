@@ -1,0 +1,14 @@
+name: Check installed tools
+on: 
+   workflow_dispatch: 
+   
+jobs:
+   IntalledTools:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Check Installed Tools
+           run: |
+              docker --version
+              python --version
+              node --version
+              git --version
