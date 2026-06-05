@@ -1,0 +1,21 @@
+name: Conditionals
+
+on:
+    workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Main Branch Only
+        if: github.ref == 'refs/heads/main'
+        run: echo "Running on main"
+
+      - name: Intentional Failure
+        run: exit 1
+        continue-on-error: true
+
+      - name: Run After Failure
+        if: failure()
+        run: echo "Previous step failed"
